@@ -25,17 +25,19 @@
             color: var(--color-text);
             background-color: var(--color-bg);
         }
- /* Header */
-header {
-    background-image: url("https://raw.githubusercontent.com/JFCudennec/jfcudennec.github.io/main/MT0041000000.jpg");
-    background-size: cover;
-    background-position: center;
-    border-bottom: 1px solid var(--color-border);
-    padding: 40px 20px;
-    text-align: center;
-    position: relative;
-}
 
+        /* Header */
+        header {
+            position: relative;
+            border-bottom: 1px solid var(--color-border);
+            padding: 40px 20px;
+            text-align: center;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
 
         header::before {
             content: '';
@@ -44,13 +46,28 @@ header {
             left: 0;
             right: 0;
             bottom: 0;
-            background-color: rgba(255, 255, 255,0.25);
+            background-image: url("https://raw.githubusercontent.com/JFCudennec/jfcudennec.github.io/main/MT0041000000.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            opacity: 0.4;
             z-index: 1;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.85);
+            z-index: 2;
         }
 
         header h1, header p {
             position: relative;
-            z-index: 2;
+            z-index: 3;
         }
 
         h1 {
@@ -61,24 +78,17 @@ header {
 
         .subtitle {
             font-size: 1.2em;
-            color: #000;
+            color: var(--color-accent);
             font-style: italic;
             margin-bottom: 16px;
-            display: block;
-            width: 100%;
-            text-align: center;
         }
 
         .bio {
             font-size: 1em;
-            color: #000;
+            color: #555;
             max-width: 700px;
             margin: 16px auto 0;
-            display: block;
-            width: 100%;
-            text-align: center;
         }
-
 
         /* Navigation */
         nav {
@@ -236,7 +246,7 @@ header {
     <header>
         <h1>Jean-François Cudennec</h1>
         <p class="subtitle">Bioarchaeologist</p>
-        <p class="bio">Sclerochronologist, investigating past environments and societies through molluscs lens</p>
+        <p class="bio">Sclerochronologist, investigating past environments and societies through mollusc lens</p>
     </header>
 
     <nav>
@@ -246,30 +256,11 @@ header {
     </nav>
 
     <main>
-               <!-- Section 1: What is Sclerochronology -->
+        <!-- Section 1: What is Sclerochronology -->
         <section id="what-is">
             <h2>What is Sclerochronology?</h2>
-
-            <p>Sclerochronology is the study of physical and chemical variations in the accretionary hard tissues of organisms, such as mollusc shells. By analyzing growth patterns, isotopic compositions, and microstructures within shell material, sclerochronologists can reconstruct past environmental conditions : palaeo-climate, palaeo-biology of organisms, geochemical cycles... and past human practices and behaviour: subsistence strategies, settlement patterns, etc.</p>
-
-            <h3>Key Applications</h3>
-            <ul>
-                <li><strong>Seasonality Determination:</strong> Shell growth increments record seasonal variations in water temperature and chemistry, allowing reconstruction of the season when molluscs were collected by past human populations.</li>
-                <li><strong>Palaeoclimatic Reconstruction:</strong> Oxygen and carbon isotopes trapped in shell material serve as proxies for sea surface temperature, salinity, and primary productivity in ancient marine environments.</li>
-                <li><strong>Human Settlement Patterns:</strong> By identifying collection seasons across multiple shell middens, we can infer residence duration, mobility patterns, and resource management strategies of coastal communities.</li>
-                <li><strong>Environmental History:</strong> Mollusk shells preserve a detailed record of environmental change spanning decades to millennia, offering unprecedented temporal resolution for understanding climate variability and anthropogenic impacts.</li>
-            </ul>
-
-            <h3>Why Molluscs?</h3>
-            <p>Molluscs are ideal subjects for sclerochronological study because:</p>
-            <ul>
-                <li>Their shells preserve exceptionally well in archaeological deposits</li>
-                <li>Daily, seasonal, and annual growth increments are often visible and measurable</li>
-                <li>They accumulate geochemical signals from their environment continuously</li>
-                <li>They are abundant in coastal and freshwater archaeological sites worldwide</li>
-            </ul>
+            <!-- Add your content here -->
         </section>
-
 
         <!-- Section 2: Current Projects -->
         <section id="projects">
@@ -299,12 +290,12 @@ header {
 
     <footer>
         <p>&copy; 2025 Jean-François Cudennec. All rights reserved.</p>
-       <div class="contact-links">
-    <a href="https://orcid.org/0000-0001-8467-1861" target="_blank">ORCID</a>
-    <a href="https://www.researchgate.net/profile/Jean-Francois-Cudennec" target="_blank">ResearchGate</a>
-    <a href="https://scholar.google.com/citations?user=3d3YsQkAAAAJ" target="_blank">Google Scholar</a>
-     <a href="https://bsky.app/profile/jfcudennec.github.io" target="_blank">Bluesky</a>
-</div>
+        <div class="contact-links">
+            <a href="https://orcid.org/0000-0001-8467-1861" target="_blank">ORCID</a>
+            <a href="https://www.researchgate.net/profile/Jean-Francois-Cudennec" target="_blank">ResearchGate</a>
+            <a href="https://scholar.google.com/citations?user=3d3YsQkAAAAJ" target="_blank">Google Scholar</a>
+            <a href="https://bsky.app/profile/jfcudennec.github.io" target="_blank">Bluesky</a>
+        </div>
     </footer>
 </body>
 </html>
